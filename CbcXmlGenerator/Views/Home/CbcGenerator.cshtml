@@ -1,11 +1,51 @@
-﻿@Styles.Render("~/Content/bootstrap.css")
-@Styles.Render("~/Content/Site.css")
-@Scripts.Render("~/Scripts/bootstrap.js")
-@Scripts.Render("~/Scripts/jquery-3.3.1.js")
-@Scripts.Render("~/Scripts/jquery.blockUI.js")
-@{
+﻿@{
     ViewBag.Title = "CbcGenerator";
     //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts {
+    <script>
+        $('#submit').click(Submit);
+
+        function Submit() {
+            $.blockUI({
+                message: '<h1>請稍候...</h1>'
+            });
+            var file = $('#samplefile').get(0).files[0];
+            if (!(typeof file === 'undefined')) {
+                var data = new FormData();
+                data.append("act", $('#act').val());
+                data.append("year", $('#year').val());
+                data.append("country", $('#country').val());
+                data.append("times", $('#times').val());
+                data.append("samplefile", file);
+                $.ajax(
+                    {
+                        type: "POST",
+                        url: "CbcGenerator",
+                        contentType: false,
+                        processData: false,
+                        dataType: "text",
+                        data: data,
+                        success: function (msg) {
+                            var ret = $.parseJSON(msg);
+                            var url = 'Download?id=' + ret.Id;
+                            window.open(url, '_blank');
+                            $.unblockUI();
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert(xhr.status);
+                            alert(xhr.responseText);
+                            alert(thrownError);
+                            $.unblockUI();
+                        }
+                    }
+                );
+            } else {
+                alert('請上傳檔案');
+                $.unblockUI();
+            }
+        }
+    </script>
 }
 <body>
     <h2>CbcGenerator</h2>
@@ -20,7 +60,7 @@
                         <option value="1">驗證Xml檔案</option>
                         <option value="2">產生Xml檔案</option>
                     </select>
-                </td>                
+                </td>
             </tr>
             <tr>
                 <td class="col-md-2">
@@ -49,12 +89,14 @@
                     <select id="times" name="times" class="form-control">
                         <option value="1">首次上傳</option>
                         <option value="2">修正上傳</option>
+                        <option value="3">首次上傳(測試)</option>
+                        <option value="4">修正上傳(測試)</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-2">
-                    <h4>檔案上傳：</h4>                    
+                    <h4>檔案上傳：</h4>
                 </td>
                 <td class="col-md-2">
                     <input type="file" class="form-inline" name="samplefile" id="samplefile" />
@@ -68,33 +110,9 @@
             </tr>
         </table>
     </div>
-    
+
 </body>
-<script>
-    function Submit() {
-        $.blockUI({
-            message: '<h1>請稍候...</h1>'
-        });
-        var file = $('#samplefile').get(0).files[0];
-        if (!(typeof file === 'undefined')) {
-            var data = new FormData();
-            data.append("act", $('#act').val());
-            data.append("year", $('#year').val());
-            data.append("country", $('#country').val());
-            data.append("times", $('#times').val());
-            data.append("samplefile", file);
-            $.ajax(
-                {
-                    type: "POST",
-                    url: ""
-                }
-            );
-        } else {
-            alert('請上傳檔案');
-        }
-        $.unblockUI();
-    }
-</script>
+
 
 
 

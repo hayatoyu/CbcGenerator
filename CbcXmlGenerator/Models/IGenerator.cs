@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CbcXmlGenerator.Models
 {
-    interface IGenerator
+    public interface IGenerator
     {
         string Generate(string path);
     }

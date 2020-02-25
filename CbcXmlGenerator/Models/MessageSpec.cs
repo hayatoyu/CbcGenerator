@@ -50,8 +50,16 @@ namespace CbcXmlGenerator.Models
         }
     }
 
+    [XmlRoot(Namespace = "http://www.ird.gov.hk/AEOI/cbc/v1")]
+    [XmlType(Namespace = "http://www.ird.gov.hk/AEOI/cbc/v1")]
     public class MessageSpecHK
     {
-
+        public string CbcId { get; set; }
+        public string ReportingEntityName { get; set; }
+        public string Language { get; set; }
+        public string MessageRefId { get; set; }
+        public string MessageTypeIndic { get; set; }
+        public string ReportingPeriod { get; set; }
+        public string Timestamp { get; set; }
     }
 }

@@ -23,23 +23,29 @@ namespace CbcXmlGenerator.Models
             [XmlElement(ElementName = "Entity")]
             public Entity entity { get; set; }
 
-            public string ReportingRole { get; set; }
+            [XmlElement(ElementName = "ReportingRole")]
+            public ReportingRole reportingRole { get; set; }
 
             [XmlElement(ElementName = "DocSpec")]
             public DocSpec docSpec { get; set; }
 
             public class Entity
             {
-                public string ResCountryCode { get; set; }
+                [XmlElement(ElementName = "ResCountryCode")]
+                public CbcReports.ResCountryCode resCountryCode { get; set; }
 
                 [XmlElement(ElementName = "TIN")]
                 public TIN tin { get; set; }
 
                 [XmlElement(ElementName = "IN")]
                 public List<IN> _in { get; set; }
+                public bool ShouldSerialize_in()
+                {
+                    return _in != null && _in.Count > 0;
+                }
 
                 [XmlElement(ElementName = "Name")]
-                public List<string> Name { get; set; }
+                public Name name { get; set; }
 
                 [XmlElement(ElementName = "Address")]
                 public Address address { get; set; }
@@ -65,52 +71,184 @@ namespace CbcXmlGenerator.Models
                     public string value { get; set; }
                 }
 
+                public class Name
+                {
+                    [XmlText]
+                    public string value { get; set; }
+                }
+
                 public class Address
                 {
                     [XmlAttribute]
                     public string legalAddressType { get; set; }
 
-                    public string CountryCode { get; set; }
+                    [XmlElement(ElementName = "CountryCode")]
+                    public CountryCode countryCode { get; set; }
 
                     [XmlElement(ElementName = "AddressFix")]
                     public AddressFix addressFix { get; set; }
 
                     public string AddressFree { get; set; }
 
+                    public class CountryCode
+                    {
+                        [XmlText]
+                        public string value { get; set; }
+                    }
 
                     public class AddressFix
                     {
-                        public string Street { get; set; }
-                        public string BuildingIdentifier { get; set; }
-                        public string SuiteIdentifier { get; set; }
-                        public string FloorIdentifier { get; set; }
-                        public string DistrictName { get; set; }
-                        public string POB { get; set; }
-                        public string PostCode { get; set; }
-                        public string City { get; set; }
-                        public string CountrySubentity { get; set; }
+                        [XmlElement(ElementName = "Street")]
+                        public Street street { get; set; }
+
+                        [XmlElement(ElementName = "BuildingIdentifier")]
+                        public BuildingIdentifier buildingIdentifier { get; set; }
+
+                        [XmlElement(ElementName = "SuiteIdentifier")]
+                        public SuiteIdentifier suiteIdentifier { get; set; }
+
+                        [XmlElement(ElementName = "FloorIdentifier")]
+                        public FloorIdentifier floorIdentifier { get; set; }
+
+                        [XmlElement(ElementName = "DistrictName")]
+                        public DistrictName districtName { get; set; }
+
+                        [XmlElement(ElementName = "POB")]
+                        public POB pOB { get; set; }
+
+                        [XmlElement(ElementName = "PostCode")]
+                        public PostCode postCode { get; set; }
+
+                        [XmlElement(ElementName = "City")]
+                        public City city { get; set; }
+
+                        [XmlElement(ElementName = "CountrySubentity")]
+                        public CountrySubentity countrySubentity { get; set; }
+
+                        public class Street
+                        {
+                            [XmlText]
+                            public string value { get; set; }
+                        }
+
+                        public class BuildingIdentifier
+                        {
+                            [XmlText]
+                            public string value { get; set; }
+                        }
+
+                        public class SuiteIdentifier
+                        {
+                            [XmlText]
+                            public string value { get; set; }
+                        }
+
+                        public class FloorIdentifier
+                        {
+                            [XmlText]
+                            public string value { get; set; }
+                        }
+
+                        public class DistrictName
+                        {
+                            [XmlText]
+                            public string value { get; set; }
+                        }
+
+                        public class POB
+                        {
+                            [XmlText]
+                            public string value { get; set; }
+                        }
+
+                        public class PostCode
+                        {
+                            [XmlText]
+                            public string value { get; set; }
+                        }
+
+                        public class City
+                        {
+                            [XmlText]
+                            public string value { get; set; }
+                        }
+
+                        public class CountrySubentity
+                        {
+                            [XmlText]
+                            public string value { get; set; }
+                        }
 
                         public AddressFix()
                         {
-                            Street = string.Empty;
-                            BuildingIdentifier = string.Empty;
-                            SuiteIdentifier = string.Empty;
-                            FloorIdentifier = string.Empty;
-                            DistrictName = string.Empty;
-                            POB = string.Empty;
-                            PostCode = string.Empty;
-                            City = string.Empty;
-                            CountrySubentity = string.Empty;
+                            street = new Street();
+                            buildingIdentifier = new BuildingIdentifier();
+                            suiteIdentifier = new SuiteIdentifier();
+                            floorIdentifier = new FloorIdentifier();
+                            districtName = new DistrictName();
+                            pOB = new POB();
+                            postCode = new PostCode();
+                            city = new City();
+                            countrySubentity = new CountrySubentity();
                         }
                     }
+
+                    public Address()
+                    {
+                        countryCode = new CountryCode();
+                        addressFix = new AddressFix();
+                    }
                 }
+
+                public Entity()
+                {
+                    resCountryCode = new CbcReports.ResCountryCode();
+                    tin = new TIN();
+                    _in = new List<IN>();
+                    name = new Name();
+                    address = new Address();
+                }
+            }
+
+            public class ReportingRole
+            {
+                [XmlText]
+                public string value { get; set; }
             }
 
             [XmlType(Namespace = "urn:oecd:ties:stf:v4")]
             public class DocSpec
             {
-                public string DocTypeIndic { get; set; }
-                public string DocRefId { get; set; }
+                [XmlElement(ElementName = "DocTypeIndic")]
+                public DocTypeIndic docTypeIndic { get; set; }
+
+                [XmlElement(ElementName = "DocRefId")]
+                public DocRefId docRefId { get; set; }
+
+                public DocSpec()
+                {
+                    docTypeIndic = new DocTypeIndic();
+                    docRefId = new DocRefId();
+                }
+
+                public class DocTypeIndic
+                {
+                    [XmlText]
+                    public string value { get; set; }
+                }
+
+                public class DocRefId
+                {
+                    [XmlText]
+                    public string value { get; set; }
+                }
+            }
+
+            public ReportingEntity()
+            {
+                entity = new Entity();
+                reportingRole = new ReportingRole();
+                docSpec = new DocSpec();
             }
         }
 
@@ -119,13 +257,327 @@ namespace CbcXmlGenerator.Models
             [XmlElement(ElementName = "DocSpec")]
             public ReportingEntity.DocSpec docSpec { get; set; }
 
-            public string ResCountryCode { get; set; }
+            [XmlElement(ElementName = "ResCountryCode")]
+            public ResCountryCode resCountryCode { get; set; }
 
             [XmlElement(ElementName = "Summary")]
             public Summary summary { get; set; }
 
             [XmlElement(ElementName = "ConstEntities")]
             public List<ConstEntities> constEntities { get; set; }
+
+            public class ResCountryCode
+            {
+                [XmlText]
+                public string value { get; set; }
+            }
+
+            public class Summary
+            {
+                [XmlElement(ElementName = "Revenues")]
+                public Revenues revenues { get; set; }
+
+                [XmlElement(ElementName = "ProfitOrLoss")]
+                public ProfitOrLoss profitOrLoss { get; set; }
+
+                [XmlElement(ElementName = "TaxPaid")]
+                public TaxPaid taxPaid { get; set; }
+
+                [XmlElement(ElementName = "TaxAccrued")]
+                public TaxAccrued taxAccrued { get; set; }
+
+                [XmlElement(ElementName = "Capital")]
+                public Capital capital { get; set; }
+
+                [XmlElement(ElementName = "Earnings")]
+                public Earnings earnings { get; set; }
+            
+                [XmlElement(ElementName = "NbEmployees")]
+                public NbEmployees nbEmployees { get; set; }
+
+                [XmlElement(ElementName = "Assets")]
+                public Assets assets { get; set; }
+
+                public class Revenues
+                {
+                    [XmlElement(ElementName = "Unrelated")]
+                    public Unrelated unrelated { get; set; }
+
+                    [XmlElement(ElementName = "Related")]
+                    public Related related { get; set; }
+
+                    [XmlElement(ElementName = "Total")]
+                    public Total total { get; set; }
+
+                    public class Unrelated : Models.Commons.CurrCode
+                    {
+                        [XmlText]
+                        public string value { get; set; }
+
+                        public Unrelated() : base() { }
+                    }
+
+                    public class Related : Models.Commons.CurrCode
+                    {
+                        [XmlText]
+                        public string value { get; set; }
+
+                        public Related() : base() { }
+                    }
+
+                    public class Total : Models.Commons.CurrCode
+                    {
+                        [XmlText]
+                        public string value { get; set; }
+
+                        public Total() : base() { }
+                    }
+
+                    public Revenues()
+                    {
+                        unrelated = new Unrelated();
+                        related = new Related();
+                        total = new Total();
+                    }
+                }
+                public class ProfitOrLoss : Models.Commons.CurrCode
+                {
+                    [XmlText]
+                    public string value { get; set; }
+
+                    public ProfitOrLoss() : base() { }
+                }
+                public class TaxPaid : Models.Commons.CurrCode
+                {
+                    [XmlText]
+                    public string value { get; set; }
+
+                    public TaxPaid() : base() { }
+                }
+                public class TaxAccrued : Models.Commons.CurrCode
+                {
+                    [XmlText]
+                    public string value;
+
+                    public TaxAccrued() : base() { }
+                }
+                public class Capital : Models.Commons.CurrCode
+                {
+                    [XmlText]
+                    public string value { get; set; }
+
+                    public Capital() : base() { }
+                }
+                public class Earnings : Models.Commons.CurrCode
+                {
+                    [XmlText]
+                    public string value { get; set; }
+
+                    public Earnings() : base() { }
+                }
+                public class NbEmployees
+                {
+                    [XmlText]
+                    public string value { get; set; }
+                }
+                public class Assets : Models.Commons.CurrCode
+                {
+                    [XmlText]
+                    public string value { get; set; }
+
+                    public Assets() : base() { }
+                }
+
+                public Summary()
+                {
+                    revenues = new Revenues();
+                    profitOrLoss = new ProfitOrLoss();
+                    taxPaid = new TaxPaid();
+                    taxAccrued = new TaxAccrued();
+                    capital = new Capital();
+                    earnings = new Earnings();
+                    nbEmployees = new NbEmployees();
+                    assets = new Assets();
+                }
+            }
+
+            public class ConstEntities
+            {
+                [XmlElement(ElementName = "ConstEntity")]
+                public ReportingEntity.Entity constEntity { get; set; }
+
+                [XmlElement(ElementName = "IncorpCountryCode")]
+                public IncorpCountryCode incorpCountryCode { get; set; }
+
+                [XmlElement(ElementName = "BizActivities")]
+                public BizActivities bizActivities { get; set; }
+
+                [XmlElement(ElementName = "OtherEntityInfo")]
+                public OtherEntityInfo otherEntityInfo { get; set; }
+
+                public ConstEntities()
+                {
+                    constEntity = new ReportingEntity.Entity();
+                    incorpCountryCode = new IncorpCountryCode();
+                    bizActivities = new BizActivities();
+                    otherEntityInfo = new OtherEntityInfo();
+                }
+
+                public class IncorpCountryCode
+                {
+                    [XmlText]
+                    public string value { get; set; }
+                }
+                public class OtherEntityInfo
+                {
+                    [XmlText]
+                    public string value { get; set; }
+                }
+                public class BizActivities
+                {
+                    [XmlText]
+                    public string value { get; set; }
+                }
+            }
+
+            public CbcReports()
+            {
+                docSpec = new ReportingEntity.DocSpec();
+                resCountryCode = new ResCountryCode();
+                summary = new Summary();
+                constEntities = new List<ConstEntities>();
+            }
+        }
+
+        public class AdditionalInfo
+        {
+            public ReportingEntity.DocSpec DocSpec { get; set; }
+
+            [XmlElement(ElementName = "OtherInfo")]
+            public OtherInfo otherInfo { get; set; }
+
+            public CbcBodyGB.CbcReports.ResCountryCode ResCountryCode { get; set; }
+
+            [XmlElement(ElementName = "SummaryRef")]
+            public SummaryRef summaryRef { get; set; }
+
+            public AdditionalInfo()
+            {
+                DocSpec = new ReportingEntity.DocSpec();
+            }
+
+            public class OtherInfo
+            {
+                [XmlText]
+                public string value { get; set; }
+            }
+
+            public class SummaryRef
+            {
+                [XmlText]
+                public string value { get; set; }
+            }
+        }
+
+        public CbcBodyGB()
+        {
+            reportingEntity = new ReportingEntity();
+            cbcReports = new List<CbcReports>();
+            addtionalInfo = new List<AdditionalInfo>();
+        }
+    }
+
+    public class CbcBodyHK
+    {
+        [XmlElement(ElementName = "CbcReports")]
+        public List<CbcReports> cbcReports { get; set; }
+
+        public class CbcReports
+        {
+            [XmlElement(ElementName = "DocSpec")]
+            public DocSpec docSpec { get; set; }
+
+            [XmlElement(ElementName = "ResCountryCode")]
+            public ResCountryCode resCountryCode { get; set; }
+
+            [XmlElement(ElementName = "Summary")]
+            public Summary summary { get; set; }
+
+            [XmlElement(ElementName = "ConstEntities")]
+            public List<ConstEntities> constEntities { get; set; }
+
+            public CbcReports()
+            {
+                docSpec = new DocSpec();
+                resCountryCode = new ResCountryCode();
+                summary = new Summary();
+                constEntities = new List<ConstEntities>();
+            }
+
+            public class DocSpec
+            {
+                [XmlElement(Namespace = "http://www.ird.gov.hk/AEOI/cbctypes/v1", ElementName = "DocTypeIndic")]
+                public DocTypeIndic docTypeIndic { get; set; }
+
+                [XmlElement(Namespace = "http://www.ird.gov.hk/AEOI/cbctypes/v1", ElementName = "DocRefId")]
+                public DocRefId docRefId { get; set; }
+
+                [XmlElement(Namespace = "http://www.ird.gov.hk/AEOI/cbctypes/v1", ElementName = "CorrFileSerialNumber")]
+                public CorrFileSerialNumber corrFileSerialNumber { get; set; }
+                public bool ShouldSerializecorrFileSerialNumber()
+                {
+                    return corrFileSerialNumber != null;
+                }
+
+                [XmlElement(Namespace = "http://www.ird.gov.hk/AEOI/cbctypes/v1", ElementName = "CorrDocRefId")]
+                public CorrDocRefId corrDocRefId { get; set; }
+                public bool ShouldSerializecorrDocRefId()
+                {
+                    return corrDocRefId != null;
+                }
+
+                public DocSpec()
+                {
+                    docTypeIndic = new DocTypeIndic();
+                    docRefId = new DocRefId();
+                }
+
+                public void InitializeWhenModify()
+                {
+                    corrFileSerialNumber = new CorrFileSerialNumber();
+                    corrDocRefId = new CorrDocRefId();
+                }
+
+                public class DocTypeIndic
+                {
+                    [XmlText]
+                    public string value { get; set; }
+                }
+
+                public class DocRefId
+                {
+                    [XmlText]
+                    public string value { get; set; }
+                }
+
+                public class CorrFileSerialNumber
+                {
+                    [XmlText]
+                    public string value { get; set; }
+                }
+
+                public class CorrDocRefId
+                {
+                    [XmlText]
+                    public string value { get; set; }
+                }
+            }
+
+            public class ResCountryCode
+            {
+                [XmlText]
+                public string value { get; set; }
+            }
 
             public class Summary
             {
@@ -147,21 +599,24 @@ namespace CbcXmlGenerator.Models
                 [XmlElement(ElementName = "Earnings")]
                 public Earnings earnings { get; set; }
 
-                public string NbEmployees { get; set; }
+                [XmlElement(ElementName = "NbEmployees")]
+                public NbEmployees nbEmployees { get; set; }
 
                 [XmlElement(ElementName = "Assets")]
                 public Assets assets { get; set; }
 
-                public class CurrCode
+                public Summary()
                 {
-                    [XmlAttribute]
-                    public string currCode { get; set; }
-
-                    public CurrCode()
-                    {
-                        currCode = "TWD";
-                    }
+                    revenues = new Revenues();
+                    profitOrLoss = new ProfitOrLoss();
+                    taxPaid = new TaxPaid();
+                    taxAccrued = new TaxAccrued();
+                    capital = new Capital();
+                    earnings = new Earnings();
+                    nbEmployees = new NbEmployees();
+                    assets = new Assets();
                 }
+
                 public class Revenues
                 {
                     [XmlElement(ElementName = "Unrelated")]
@@ -173,7 +628,14 @@ namespace CbcXmlGenerator.Models
                     [XmlElement(ElementName = "Total")]
                     public Total total { get; set; }
 
-                    public class Unrelated : CurrCode
+                    public Revenues()
+                    {
+                        unrelated = new Unrelated();
+                        related = new Related();
+                        total = new Total();
+                    }
+
+                    public class Unrelated : Models.Commons.CurrCode
                     {
                         [XmlText]
                         public string value { get; set; }
@@ -181,7 +643,7 @@ namespace CbcXmlGenerator.Models
                         public Unrelated() : base() { }
                     }
 
-                    public class Related : CurrCode
+                    public class Related : Models.Commons.CurrCode
                     {
                         [XmlText]
                         public string value { get; set; }
@@ -189,7 +651,7 @@ namespace CbcXmlGenerator.Models
                         public Related() : base() { }
                     }
 
-                    public class Total : CurrCode
+                    public class Total : Models.Commons.CurrCode
                     {
                         [XmlText]
                         public string value { get; set; }
@@ -197,35 +659,40 @@ namespace CbcXmlGenerator.Models
                         public Total() : base() { }
                     }
                 }
-                public class ProfitOrLoss : CurrCode
+
+                public class ProfitOrLoss : Models.Commons.CurrCode
                 {
                     [XmlText]
                     public string value { get; set; }
 
                     public ProfitOrLoss() : base() { }
                 }
-                public class TaxPaid : CurrCode
+
+                public class TaxPaid : Models.Commons.CurrCode
                 {
                     [XmlText]
                     public string value { get; set; }
 
                     public TaxPaid() : base() { }
                 }
-                public class TaxAccrued : CurrCode
+
+                public class TaxAccrued : Commons.CurrCode
                 {
                     [XmlText]
-                    public string value;
+                    public string value { get; set; }
 
                     public TaxAccrued() : base() { }
                 }
-                public class Capital : CurrCode
+
+                public class Capital : Commons.CurrCode
                 {
                     [XmlText]
                     public string value { get; set; }
 
                     public Capital() : base() { }
                 }
-                public class Earnings : CurrCode
+
+                public class Earnings : Commons.CurrCode
                 {
                     [XmlText]
                     public string value { get; set; }
@@ -233,7 +700,13 @@ namespace CbcXmlGenerator.Models
                     public Earnings() : base() { }
                 }
 
-                public class Assets : CurrCode
+                public class NbEmployees
+                {
+                    [XmlText]
+                    public string value { get; set; }
+                }
+
+                public class Assets : Commons.CurrCode
                 {
                     [XmlText]
                     public string value { get; set; }
@@ -245,25 +718,249 @@ namespace CbcXmlGenerator.Models
             public class ConstEntities
             {
                 [XmlElement(ElementName = "ConstEntity")]
-                public ReportingEntity.Entity constEntity { get; set; }
-
-                public string IncorpCountryCode { get; set; }
+                public ConstEntity constEntity { get; set; }
 
                 [XmlElement(ElementName = "BizActivities")]
-                public List<string> BizActivities { get; set; }
+                public BizActivities bizActivities { get; set; }
 
-                public string OtherEntityInfo { get; set; }
+                [XmlElement(ElementName = "OtherEntityInfo")]
+                public OtherEntityInfo otherEntityInfo { get; set; }
 
+                public ConstEntities()
+                {
+                    constEntity = new ConstEntity();
+                    bizActivities = new BizActivities();
+                    otherEntityInfo = new OtherEntityInfo();
+                }
+
+                public class ConstEntity
+                {
+                    [XmlElement(ElementName = "ResCountryCode")]
+                    public CbcBodyHK.CbcReports.ResCountryCode resCountryCode { get; set; }
+
+                    [XmlElement(ElementName = "TIN")]
+                    public TIN tIN { get; set; }
+
+                    [XmlElement(ElementName = "IN")]
+                    public IN iN { get; set; }
+                    public bool ShouldSerializeiN()
+                    {
+                        return iN != null && !string.IsNullOrEmpty(iN.value);
+                    }
+
+                    [XmlElement(ElementName = "Name")]
+                    public Name name { get; set; }
+
+                    [XmlElement(ElementName = "Address")]
+                    public Address address { get; set; }
+
+                    public ConstEntity()
+                    {
+                        resCountryCode = new ResCountryCode();
+                        tIN = new TIN();
+                        iN = new IN();
+                        name = new Name();
+                        address = new Address();
+                    }                    
+
+                    public class TIN : Commons.IssuedBy
+                    {
+                        [XmlText]
+                        public string value { get; set; }
+
+                        public TIN() : base() { }
+                    }
+
+                    public class IN : Commons.IssuedBy
+                    {
+                        [XmlText]
+                        public string value { get; set; }
+
+                        public IN() : base() { }
+                    }
+
+                    public class Name
+                    {
+                        [XmlText]
+                        public string value { get; set; }
+                    }
+
+                    public class Address
+                    {
+                        [XmlAttribute]
+                        public string legalAddressType { get; set; }
+
+                        [XmlElement(ElementName = "CountryCode")]
+                        public CountryCode country { get; set; }
+
+                        [XmlElement(ElementName = "AddressFix")]
+                        public AddressFix addressFix { get; set; }
+
+                        public Address()
+                        {
+                            country = new CountryCode();
+                            addressFix = new AddressFix();
+                        }
+
+                        public class CountryCode
+                        {
+                            [XmlText]
+                            public string value { get; set; }
+                        }
+
+                        public class AddressFix
+                        {
+                            [XmlElement(ElementName = "Street")]
+                            public Street street { get; set; }
+                            public bool ShouldSerializestreet()
+                            {
+                                return !string.IsNullOrEmpty(street.value);
+                            }
+
+                            [XmlElement(ElementName = "BuildingIdentifier")]
+                            public BuildingIdentifier buildingIdentifier { get; set; }
+                            public bool ShouldSerializebuildingIdentifier()
+                            {
+                                return !string.IsNullOrEmpty(buildingIdentifier.value);
+                            }
+
+                            [XmlElement(ElementName = "SuiteIdentifier")]
+                            public SuiteIdentifier suiteIdentifier { get; set; }
+                            public bool ShouldSerializesuiteIdentifier()
+                            {
+                                return !string.IsNullOrEmpty(suiteIdentifier.value);
+                            }
+
+                            [XmlElement(ElementName = "FloorIdentifier")]
+                            public FloorIdentifier floorIdentifier { get; set; }
+                            public bool ShouldSerializefloorIdentifier()
+                            {
+                                return !string.IsNullOrEmpty(floorIdentifier.value);
+                            }
+
+                            [XmlElement(ElementName = "DistrictName")]
+                            public DistrictName districtName { get; set; }
+                            public bool ShouldSerializedistrictName()
+                            {
+                                return !string.IsNullOrEmpty(districtName.value);
+                            }
+
+                            [XmlElement(ElementName = "POB")]
+                            public POB pOB { get; set; }
+                            public bool ShouldSerializepOB()
+                            {
+                                return !string.IsNullOrEmpty(pOB.value);
+                            }
+
+                            [XmlElement(ElementName = "PostCode")]
+                            public PostCode postCode { get; set; }
+                            public bool ShouldSerializepostCode()
+                            {
+                                return !string.IsNullOrEmpty(postCode.value);
+                            }
+
+                            [XmlElement(ElementName = "City")]
+                            public City city { get; set; }
+                            public bool ShouldSerializecity()
+                            {
+                                return !string.IsNullOrEmpty(city.value);
+                            }
+
+                            [XmlElement(ElementName = "CountrySubentity")]
+                            public CountrySubentity countrySubentity { get; set; }
+                            public bool ShouldSerializecountrySubentity()
+                            {
+                                return !string.IsNullOrEmpty(countrySubentity.value);
+                            }
+
+                            public AddressFix()
+                            {
+                                street = new Street();
+                                buildingIdentifier = new BuildingIdentifier();
+                                suiteIdentifier = new SuiteIdentifier();
+                                floorIdentifier = new FloorIdentifier();
+                                districtName = new DistrictName();
+                                pOB = new POB();
+                                postCode = new PostCode();
+                                city = new City();
+                                countrySubentity = new CountrySubentity();
+                            }
+
+                            public class Street
+                            {
+                                [XmlText]
+                                public string value { get; set; }
+                            }
+
+                            public class BuildingIdentifier
+                            {
+                                [XmlText]
+                                public string value { get; set; }
+                            }
+
+                            public class SuiteIdentifier
+                            {
+                                [XmlText]
+                                public string value { get; set; }
+                            }
+
+                            public class FloorIdentifier
+                            {
+                                [XmlText]
+                                public string value { get; set; }
+                            }
+
+                            public class DistrictName
+                            {
+                                [XmlText]
+                                public string value { get; set; }
+                            }
+
+                            public class POB
+                            {
+                                [XmlText]
+                                public string value { get; set; }
+                            }
+
+                            public class PostCode
+                            {
+                                [XmlText]
+                                public string value { get; set; }
+                            }
+
+                            public class City
+                            {
+                                [XmlText]
+                                public string value { get; set; }
+                            }
+
+                            public class CountrySubentity
+                            {
+                                [XmlText]
+                                public string value { get; set; }
+                            }
+                        }
+                    }
+                }
+
+                public class BizActivities
+                {
+                    [XmlText]
+                    public string value { get; set; }
+                }
+
+                public class OtherEntityInfo
+                {
+                    [XmlText]
+                    public string value { get; set; }
+                }
 
             }
         }
 
-        public class AdditionalInfo
+        public CbcBodyHK()
         {
-            public ReportingEntity.DocSpec DocSpec { get; set; }
-            public string OtherInfo { get; set; }
-            public string ResCountryCode { get; set; }
-            public string SummaryRef { get; set; }
+            cbcReports = new List<CbcReports>();
         }
     }
 }

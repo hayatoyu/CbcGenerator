@@ -6,17 +6,31 @@ using System.Text;
 using System.Xml;
 using System.Xml.Schema;
 using System.IO;
+using log4net;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace CbcXmlGenerator.Models
 {
     public class CbcXmlAgent
     {
+        ILog log = log4net.LogManager.GetLogger(typeof(CbcXmlAgent));
         IGenerator generator = null;
         StringBuilder stbr = null;
-        private bool isSuccess = false;
+        private bool isSuccess = true;
+
+        public CbcXmlAgent()
+        {
+            stbr = new StringBuilder();
+        }
+
+        public CbcXmlAgent(IGenerator g) : this()
+        {
+            generator = g;
+        }
 
         #region 驗證 Xml
-        public void XmlValidate(string xsdPath,string xmlPath,string nameSpace,string outputPath)
+        public string XmlValidate(string xsdPath,string xmlPath,string nameSpace,string outputPath)
         {
             XmlReaderSettings settings = new XmlReaderSettings();
             settings.Schemas.Add(nameSpace, XmlReader.Create(xsdPath));
@@ -35,7 +49,22 @@ namespace CbcXmlGenerator.Models
             {
                 outputFile.WriteLine(stbr.ToString());
             }
-                
+            reader.Close();
+
+            // 驗證完要加入到資料庫
+            FileInfo fileInfo = new FileInfo(outputPath);
+            FileDownload filedownload = new FileDownload();
+            filedownload.FileName = fileInfo.Name;
+            filedownload.Id = fileInfo.Name.Replace(".txt", "");
+            filedownload.FileStream = File.ReadAllBytes(outputPath);
+            filedownload.CreateDate = DateTime.Now;
+            filedownload = filedownload.Insert(filedownload);
+
+            // 刪除檔案
+            fileInfo.Directory.Delete(true);
+            log.DebugFormat("Delete {0},{1} and located folder",xmlPath, outputPath);
+
+            return JsonConvert.SerializeObject(new { Id = filedownload.Id });
         }
 
         public void XmlSettingsValidationEventHandler(object sender,ValidationEventArgs e)
@@ -55,6 +84,12 @@ namespace CbcXmlGenerator.Models
         }
 
         #endregion
-        
+
+        #region 產生 Xml
+        public string Generate(string filepath)
+        {
+            return generator.Generate(filepath);
+        }
+        #endregion
     }
 }
