@@ -100,30 +100,66 @@ namespace CbcXmlGenerator.Models
                     {
                         [XmlElement(ElementName = "Street")]
                         public Street street { get; set; }
+                        public bool ShouldSerializestreet()
+                        {
+                            return !string.IsNullOrEmpty(street.value);
+                        }
 
                         [XmlElement(ElementName = "BuildingIdentifier")]
                         public BuildingIdentifier buildingIdentifier { get; set; }
+                        public bool ShouldSerializebuildingIdentifier()
+                        {
+                            return !string.IsNullOrEmpty(buildingIdentifier.value);
+                        }
 
                         [XmlElement(ElementName = "SuiteIdentifier")]
                         public SuiteIdentifier suiteIdentifier { get; set; }
+                        public bool ShouldSerializesuiteIdenifier()
+                        {
+                            return !string.IsNullOrEmpty(suiteIdentifier.value);
+                        }
 
                         [XmlElement(ElementName = "FloorIdentifier")]
                         public FloorIdentifier floorIdentifier { get; set; }
+                        public bool ShouldSerializefloorIdentifier()
+                        {
+                            return !string.IsNullOrEmpty(floorIdentifier.value);
+                        }
 
                         [XmlElement(ElementName = "DistrictName")]
                         public DistrictName districtName { get; set; }
+                        public bool ShouldSerializedistrictName()
+                        {
+                            return !string.IsNullOrEmpty(districtName.value);
+                        }
 
                         [XmlElement(ElementName = "POB")]
                         public POB pOB { get; set; }
+                        public bool ShouldSerializepOB()
+                        {
+                            return !string.IsNullOrEmpty(pOB.value);
+                        }
 
                         [XmlElement(ElementName = "PostCode")]
                         public PostCode postCode { get; set; }
+                        public bool ShouldSerializepostCode()
+                        {
+                            return !string.IsNullOrEmpty(postCode.value);
+                        }
 
                         [XmlElement(ElementName = "City")]
                         public City city { get; set; }
+                        public bool ShouldSerializecity()
+                        {
+                            return !string.IsNullOrEmpty(city.value);
+                        }
 
                         [XmlElement(ElementName = "CountrySubentity")]
                         public CountrySubentity countrySubentity { get; set; }
+                        public bool ShouldSerializecountrySubentity()
+                        {
+                            return !string.IsNullOrEmpty(countrySubentity.value);
+                        }
 
                         public class Street
                         {
