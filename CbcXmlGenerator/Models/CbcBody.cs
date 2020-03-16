@@ -52,11 +52,26 @@ namespace CbcXmlGenerator.Models
 
                 public class TIN
                 {
+                    private string _tin;
+
                     [XmlAttribute]
                     public string issuedBy { get; set; }
 
                     [XmlText]
-                    public string tin { get; set; }
+                    public string tin
+                    {
+                        get
+                        {
+                            if (string.IsNullOrEmpty(_tin) || _tin.Contains("NOTIN"))
+                                return string.Empty;
+                            else
+                                return _tin;
+                        }
+                        set
+                        {
+                            _tin = value;
+                        }
+                    }
                 }
 
                 public class IN
@@ -114,7 +129,7 @@ namespace CbcXmlGenerator.Models
 
                         [XmlElement(ElementName = "SuiteIdentifier")]
                         public SuiteIdentifier suiteIdentifier { get; set; }
-                        public bool ShouldSerializesuiteIdenifier()
+                        public bool ShouldSerializesuiteIdentifier()
                         {
                             return !string.IsNullOrEmpty(suiteIdentifier.value);
                         }
@@ -801,8 +816,23 @@ namespace CbcXmlGenerator.Models
 
                     public class TIN : Commons.IssuedBy
                     {
+                        private string _val;
+
                         [XmlText]
-                        public string value { get; set; }
+                        public string val
+                        {
+                            get
+                            {
+                                if (string.IsNullOrEmpty(_val) || _val.Contains("NOTIN"))
+                                    return string.Empty;
+                                else
+                                    return _val;
+                            }
+                            set
+                            {
+                                _val = value;
+                            }
+                        }
 
                         public TIN() : base() { }
                     }

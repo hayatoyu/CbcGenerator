@@ -186,7 +186,7 @@ namespace CbcXmlGenerator.Models
                         CbcBodyHK.CbcReports.ConstEntities.ConstEntity constEntity = new CbcBodyHK.CbcReports.ConstEntities.ConstEntity();
                         constEntity.resCountryCode.value = ws.SheetName;
                         cell = row.GetCell(1);
-                        constEntity.tIN.value = GetCellStringValue(cell);                        
+                        constEntity.tIN.val = GetCellStringValue(cell);                        
 
                         cell = row.GetCell(3);
                         constEntity.iN.value = GetCellStringValue(cell);                        
