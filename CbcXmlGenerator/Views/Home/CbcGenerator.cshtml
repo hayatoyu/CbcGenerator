@@ -27,9 +27,15 @@
                         dataType: "text",
                         data: data,
                         success: function (msg) {
-                            var ret = $.parseJSON(msg);
-                            var url = 'Download?id=' + ret.Id;
-                            window.open(url, '_blank');
+
+                            try {
+                                var ret = $.parseJSON(msg);
+                                var url = 'Download?id=' + ret.Id;
+                                window.open(url, '_blank');
+                            } catch (e) {
+                                alert(e);
+                                alert(msg);
+                            }                                                                                    
                             $.unblockUI();
                         },
                         error: function (xhr, ajaxOptions, thrownError) {

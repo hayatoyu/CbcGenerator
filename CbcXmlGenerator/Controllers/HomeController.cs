@@ -82,7 +82,7 @@ namespace CbcXmlGenerator.Controllers
                 else
                 {
                     log.Debug("Received File is not a xml file");
-                    return string.Empty;
+                    return "驗證功能請輸入xml檔案";
                 }
             }
             else
@@ -147,7 +147,8 @@ namespace CbcXmlGenerator.Controllers
                 }
                 catch(Exception e)
                 {
-                    log.Error(e.Message);                    
+                    log.Error(e.Message);
+                    result = e.Message;
                 }
                 
             }
