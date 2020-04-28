@@ -43,7 +43,8 @@ namespace CbcXmlGenerator.Controllers
         public string CbcGenerator(string act,string year,string country,string times,HttpPostedFileBase samplefile)
         {
             string timenow = DateTime.Now.ToString("yyyyMMddHH-mm-ss");
-            string dirpath = Path.Combine(Server.MapPath("~/FileUpload/"), timenow);
+            string fileuploadDir = Server.MapPath("~/FileUpload/");
+            string dirpath = Path.Combine(fileuploadDir, timenow);
             string filename = null,filepath = null,result = null;
             Models.CbcXmlAgent agent = null;
             StringBuilder stbr = new StringBuilder();
@@ -153,6 +154,13 @@ namespace CbcXmlGenerator.Controllers
                 
             }
             log.DebugFormat("Return Result : {0}", result);
+
+            // 清除上傳檔案
+            DirectoryInfo dirInfo = new DirectoryInfo(fileuploadDir);
+            foreach(var d in dirInfo.GetDirectories())
+            {
+                d.Delete(true);
+            }
             return result;
         }
 
