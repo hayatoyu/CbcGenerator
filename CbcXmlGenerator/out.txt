@@ -1,0 +1,815 @@
+列出磁碟區 WIN7 的資料夾 PATH
+磁碟區序號為 8EB5-0721
+C:.
+│  ApplicationInsights.config
+│  CbcXmlGenerator.csproj
+│  CbcXmlGenerator.csproj.user
+│  favicon.ico
+│  Global.asax
+│  Global.asax.cs
+│  out.txt
+│  packages.config
+│  Web.config
+│  Web.Debug.config
+│  Web.Release.config
+│  
+├─App_Data
+├─App_Start
+│      BundleConfig.cs
+│      FilterConfig.cs
+│      RouteConfig.cs
+│      
+├─bin
+│  │  Antlr3.Runtime.dll
+│  │  Antlr3.Runtime.pdb
+│  │  ApplicationInsights.config
+│  │  CbcXmlGenerator.dll
+│  │  CbcXmlGenerator.dll.config
+│  │  CbcXmlGenerator.pdb
+│  │  Dapper.dll
+│  │  Dapper.xml
+│  │  ICSharpCode.SharpZipLib.dll
+│  │  ICSharpCode.SharpZipLib.xml
+│  │  log4net.dll
+│  │  log4net.xml
+│  │  Microsoft.AI.Agent.Intercept.dll
+│  │  Microsoft.AI.DependencyCollector.dll
+│  │  Microsoft.AI.DependencyCollector.xml
+│  │  Microsoft.AI.PerfCounterCollector.dll
+│  │  Microsoft.AI.ServerTelemetryChannel.dll
+│  │  Microsoft.AI.Web.dll
+│  │  Microsoft.AI.Web.xml
+│  │  Microsoft.AI.WindowsServer.dll
+│  │  Microsoft.AI.WindowsServer.xml
+│  │  Microsoft.ApplicationInsights.dll
+│  │  Microsoft.AspNet.TelemetryCorrelation.dll
+│  │  Microsoft.AspNet.TelemetryCorrelation.xml
+│  │  Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+│  │  Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+│  │  Microsoft.Web.Infrastructure.dll
+│  │  Newtonsoft.Json.dll
+│  │  Newtonsoft.Json.xml
+│  │  NPOI.dll
+│  │  NPOI.OOXML.dll
+│  │  NPOI.OpenXml4Net.dll
+│  │  NPOI.OpenXmlFormats.dll
+│  │  System.Diagnostics.DiagnosticSource.dll
+│  │  System.Diagnostics.DiagnosticSource.xml
+│  │  System.Web.Helpers.dll
+│  │  System.Web.Helpers.xml
+│  │  System.Web.Mvc.dll
+│  │  System.Web.Mvc.xml
+│  │  System.Web.Optimization.dll
+│  │  System.Web.Optimization.xml
+│  │  System.Web.Razor.dll
+│  │  System.Web.Razor.xml
+│  │  System.Web.WebPages.Deployment.dll
+│  │  System.Web.WebPages.Deployment.xml
+│  │  System.Web.WebPages.dll
+│  │  System.Web.WebPages.Razor.dll
+│  │  System.Web.WebPages.Razor.xml
+│  │  System.Web.WebPages.xml
+│  │  WebGrease.dll
+│  │  
+│  ├─roslyn
+│  │      csc.exe
+│  │      csc.exe.config
+│  │      csc.rsp
+│  │      csi.exe
+│  │      csi.exe.config
+│  │      csi.rsp
+│  │      Microsoft.Build.Tasks.CodeAnalysis.dll
+│  │      Microsoft.CodeAnalysis.CSharp.dll
+│  │      Microsoft.CodeAnalysis.CSharp.Scripting.dll
+│  │      Microsoft.CodeAnalysis.dll
+│  │      Microsoft.CodeAnalysis.Scripting.dll
+│  │      Microsoft.CodeAnalysis.VisualBasic.dll
+│  │      Microsoft.CSharp.Core.targets
+│  │      Microsoft.DiaSymReader.Native.amd64.dll
+│  │      Microsoft.DiaSymReader.Native.x86.dll
+│  │      Microsoft.Managed.Core.targets
+│  │      Microsoft.VisualBasic.Core.targets
+│  │      System.AppContext.dll
+│  │      System.Collections.Immutable.dll
+│  │      System.Console.dll
+│  │      System.Diagnostics.FileVersionInfo.dll
+│  │      System.Diagnostics.StackTrace.dll
+│  │      System.IO.Compression.dll
+│  │      System.IO.FileSystem.dll
+│  │      System.IO.FileSystem.Primitives.dll
+│  │      System.IO.Pipes.AccessControl.dll
+│  │      System.IO.Pipes.dll
+│  │      System.Reflection.Metadata.dll
+│  │      System.Security.AccessControl.dll
+│  │      System.Security.Claims.dll
+│  │      System.Security.Cryptography.Algorithms.dll
+│  │      System.Security.Cryptography.Encoding.dll
+│  │      System.Security.Cryptography.Primitives.dll
+│  │      System.Security.Cryptography.X509Certificates.dll
+│  │      System.Security.Principal.Windows.dll
+│  │      System.Text.Encoding.CodePages.dll
+│  │      System.ValueTuple.dll
+│  │      System.Xml.ReaderWriter.dll
+│  │      System.Xml.XmlDocument.dll
+│  │      System.Xml.XPath.dll
+│  │      System.Xml.XPath.XDocument.dll
+│  │      vbc.exe
+│  │      vbc.exe.config
+│  │      vbc.rsp
+│  │      VBCSCompiler.exe
+│  │      VBCSCompiler.exe.config
+│  │      
+│  ├─Validation
+│  │  ├─GB
+│  │  │      CbcXML_v1.0.1.xsd
+│  │  │      isocbctypes_v1.0.1.xsd
+│  │  │      oecdtypes_v4.1.xsd
+│  │  │      
+│  │  └─HK
+│  │          cbctypes_v1.0.xsd
+│  │          Cbc_HK_XML_v1.0.xsd
+│  │          isocbctypes_v1.0.1.xsd
+│  │          
+│  └─zh-Hant
+│          System.Web.Helpers.resources.dll
+│          System.Web.Mvc.resources.dll
+│          System.Web.Optimization.resources.dll
+│          System.Web.Razor.resources.dll
+│          System.Web.WebPages.Deployment.resources.dll
+│          System.Web.WebPages.Razor.resources.dll
+│          System.Web.WebPages.resources.dll
+│          
+├─Content
+│  │  bootstrap-theme.css
+│  │  bootstrap-theme.css.map
+│  │  bootstrap-theme.min.css
+│  │  bootstrap-theme.min.css.map
+│  │  bootstrap.css
+│  │  bootstrap.css.map
+│  │  bootstrap.min.css
+│  │  bootstrap.min.css.map
+│  │  jquery-ui.css
+│  │  jquery-ui.structure.css
+│  │  jquery-ui.theme.css
+│  │  Site.css
+│  │  
+│  └─images
+│          ui-icons_444444_256x240.png
+│          ui-icons_555555_256x240.png
+│          ui-icons_777620_256x240.png
+│          ui-icons_777777_256x240.png
+│          ui-icons_cc0000_256x240.png
+│          ui-icons_ffffff_256x240.png
+│          
+├─Controllers
+│      HomeController.cs
+│      
+├─FileUpload
+├─fonts
+│      glyphicons-halflings-regular.eot
+│      glyphicons-halflings-regular.svg
+│      glyphicons-halflings-regular.ttf
+│      glyphicons-halflings-regular.woff
+│      glyphicons-halflings-regular.woff2
+│      
+├─imgs
+│      image.zip
+│      
+├─Models
+│      CbcBody.cs
+│      CbcBody.cs~RF664755f.TMP
+│      CbcOECD.cs
+│      CbcXmlAgent.cs
+│      Commons.cs
+│      FileDownload.cs
+│      GBGenerator.cs
+│      HKGenerator.cs
+│      IGenerator.cs
+│      MessageSpec.cs
+│      NameSpaces.cs
+│      StringWriterWithEncodings.cs
+│      
+├─obj
+│  ├─Debug
+│  │  │  build.force
+│  │  │  CbcXmlGenerator.csproj.CopyComplete
+│  │  │  CbcXmlGenerator.csproj.CoreCompileInputs.cache
+│  │  │  CbcXmlGenerator.csproj.FileListAbsolute.txt
+│  │  │  CbcXmlGenerator.csprojAssemblyReference.cache
+│  │  │  CbcXmlGenerator.dll
+│  │  │  CbcXmlGenerator.pdb
+│  │  │  CSAutoParameterize.parameters.xml
+│  │  │  DesignTimeResolveAssemblyReferences.cache
+│  │  │  DesignTimeResolveAssemblyReferencesInput.cache
+│  │  │  TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+│  │  │  TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+│  │  │  TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+│  │  │  _WPPLastBuildInfo.txt
+│  │  │  
+│  │  ├─AspnetCompileMerge
+│  │  │  ├─Source
+│  │  │  │  │  ApplicationInsights.config
+│  │  │  │  │  favicon.ico
+│  │  │  │  │  Global.asax
+│  │  │  │  │  Web.config
+│  │  │  │  │  
+│  │  │  │  ├─bin
+│  │  │  │  │  │  Antlr3.Runtime.dll
+│  │  │  │  │  │  Antlr3.Runtime.pdb
+│  │  │  │  │  │  ApplicationInsights.config
+│  │  │  │  │  │  CbcXmlGenerator.dll
+│  │  │  │  │  │  CbcXmlGenerator.pdb
+│  │  │  │  │  │  Dapper.dll
+│  │  │  │  │  │  ICSharpCode.SharpZipLib.dll
+│  │  │  │  │  │  log4net.dll
+│  │  │  │  │  │  Microsoft.AI.Agent.Intercept.dll
+│  │  │  │  │  │  Microsoft.AI.DependencyCollector.dll
+│  │  │  │  │  │  Microsoft.AI.PerfCounterCollector.dll
+│  │  │  │  │  │  Microsoft.AI.ServerTelemetryChannel.dll
+│  │  │  │  │  │  Microsoft.AI.Web.dll
+│  │  │  │  │  │  Microsoft.AI.WindowsServer.dll
+│  │  │  │  │  │  Microsoft.ApplicationInsights.dll
+│  │  │  │  │  │  Microsoft.AspNet.TelemetryCorrelation.dll
+│  │  │  │  │  │  Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+│  │  │  │  │  │  Microsoft.Web.Infrastructure.dll
+│  │  │  │  │  │  Newtonsoft.Json.dll
+│  │  │  │  │  │  NPOI.dll
+│  │  │  │  │  │  NPOI.OOXML.dll
+│  │  │  │  │  │  NPOI.OpenXml4Net.dll
+│  │  │  │  │  │  NPOI.OpenXmlFormats.dll
+│  │  │  │  │  │  System.Diagnostics.DiagnosticSource.dll
+│  │  │  │  │  │  System.Web.Helpers.dll
+│  │  │  │  │  │  System.Web.Mvc.dll
+│  │  │  │  │  │  System.Web.Optimization.dll
+│  │  │  │  │  │  System.Web.Razor.dll
+│  │  │  │  │  │  System.Web.WebPages.Deployment.dll
+│  │  │  │  │  │  System.Web.WebPages.dll
+│  │  │  │  │  │  System.Web.WebPages.Razor.dll
+│  │  │  │  │  │  WebGrease.dll
+│  │  │  │  │  │  
+│  │  │  │  │  ├─roslyn
+│  │  │  │  │  │      csc.exe
+│  │  │  │  │  │      csc.exe.config
+│  │  │  │  │  │      csc.rsp
+│  │  │  │  │  │      csi.exe
+│  │  │  │  │  │      csi.exe.config
+│  │  │  │  │  │      csi.rsp
+│  │  │  │  │  │      Microsoft.Build.Tasks.CodeAnalysis.dll
+│  │  │  │  │  │      Microsoft.CodeAnalysis.CSharp.dll
+│  │  │  │  │  │      Microsoft.CodeAnalysis.CSharp.Scripting.dll
+│  │  │  │  │  │      Microsoft.CodeAnalysis.dll
+│  │  │  │  │  │      Microsoft.CodeAnalysis.Scripting.dll
+│  │  │  │  │  │      Microsoft.CodeAnalysis.VisualBasic.dll
+│  │  │  │  │  │      Microsoft.CSharp.Core.targets
+│  │  │  │  │  │      Microsoft.DiaSymReader.Native.amd64.dll
+│  │  │  │  │  │      Microsoft.DiaSymReader.Native.x86.dll
+│  │  │  │  │  │      Microsoft.Managed.Core.targets
+│  │  │  │  │  │      Microsoft.VisualBasic.Core.targets
+│  │  │  │  │  │      System.AppContext.dll
+│  │  │  │  │  │      System.Collections.Immutable.dll
+│  │  │  │  │  │      System.Console.dll
+│  │  │  │  │  │      System.Diagnostics.FileVersionInfo.dll
+│  │  │  │  │  │      System.Diagnostics.StackTrace.dll
+│  │  │  │  │  │      System.IO.Compression.dll
+│  │  │  │  │  │      System.IO.FileSystem.dll
+│  │  │  │  │  │      System.IO.FileSystem.Primitives.dll
+│  │  │  │  │  │      System.IO.Pipes.AccessControl.dll
+│  │  │  │  │  │      System.IO.Pipes.dll
+│  │  │  │  │  │      System.Reflection.Metadata.dll
+│  │  │  │  │  │      System.Security.AccessControl.dll
+│  │  │  │  │  │      System.Security.Claims.dll
+│  │  │  │  │  │      System.Security.Cryptography.Algorithms.dll
+│  │  │  │  │  │      System.Security.Cryptography.Encoding.dll
+│  │  │  │  │  │      System.Security.Cryptography.Primitives.dll
+│  │  │  │  │  │      System.Security.Cryptography.X509Certificates.dll
+│  │  │  │  │  │      System.Security.Principal.Windows.dll
+│  │  │  │  │  │      System.Text.Encoding.CodePages.dll
+│  │  │  │  │  │      System.ValueTuple.dll
+│  │  │  │  │  │      System.Xml.ReaderWriter.dll
+│  │  │  │  │  │      System.Xml.XmlDocument.dll
+│  │  │  │  │  │      System.Xml.XPath.dll
+│  │  │  │  │  │      System.Xml.XPath.XDocument.dll
+│  │  │  │  │  │      vbc.exe
+│  │  │  │  │  │      vbc.exe.config
+│  │  │  │  │  │      vbc.rsp
+│  │  │  │  │  │      VBCSCompiler.exe
+│  │  │  │  │  │      VBCSCompiler.exe.config
+│  │  │  │  │  │      
+│  │  │  │  │  ├─Validation
+│  │  │  │  │  │  ├─GB
+│  │  │  │  │  │  │      CbcXML_v1.0.1.xsd
+│  │  │  │  │  │  │      isocbctypes_v1.0.1.xsd
+│  │  │  │  │  │  │      oecdtypes_v4.1.xsd
+│  │  │  │  │  │  │      
+│  │  │  │  │  │  └─HK
+│  │  │  │  │  │          cbctypes_v1.0.xsd
+│  │  │  │  │  │          Cbc_HK_XML_v1.0.xsd
+│  │  │  │  │  │          isocbctypes_v1.0.1.xsd
+│  │  │  │  │  │          
+│  │  │  │  │  └─zh-Hant
+│  │  │  │  │          System.Web.Helpers.resources.dll
+│  │  │  │  │          System.Web.Mvc.resources.dll
+│  │  │  │  │          System.Web.Optimization.resources.dll
+│  │  │  │  │          System.Web.Razor.resources.dll
+│  │  │  │  │          System.Web.WebPages.Deployment.resources.dll
+│  │  │  │  │          System.Web.WebPages.Razor.resources.dll
+│  │  │  │  │          System.Web.WebPages.resources.dll
+│  │  │  │  │          
+│  │  │  │  ├─Content
+│  │  │  │  │  │  bootstrap-theme.css
+│  │  │  │  │  │  bootstrap-theme.css.map
+│  │  │  │  │  │  bootstrap-theme.min.css
+│  │  │  │  │  │  bootstrap-theme.min.css.map
+│  │  │  │  │  │  bootstrap.css
+│  │  │  │  │  │  bootstrap.css.map
+│  │  │  │  │  │  bootstrap.min.css
+│  │  │  │  │  │  bootstrap.min.css.map
+│  │  │  │  │  │  jquery-ui.css
+│  │  │  │  │  │  jquery-ui.structure.css
+│  │  │  │  │  │  jquery-ui.theme.css
+│  │  │  │  │  │  Site.css
+│  │  │  │  │  │  
+│  │  │  │  │  └─images
+│  │  │  │  │          ui-icons_444444_256x240.png
+│  │  │  │  │          ui-icons_555555_256x240.png
+│  │  │  │  │          ui-icons_777620_256x240.png
+│  │  │  │  │          ui-icons_777777_256x240.png
+│  │  │  │  │          ui-icons_cc0000_256x240.png
+│  │  │  │  │          ui-icons_ffffff_256x240.png
+│  │  │  │  │          
+│  │  │  │  ├─fonts
+│  │  │  │  │      glyphicons-halflings-regular.eot
+│  │  │  │  │      glyphicons-halflings-regular.svg
+│  │  │  │  │      glyphicons-halflings-regular.ttf
+│  │  │  │  │      glyphicons-halflings-regular.woff
+│  │  │  │  │      glyphicons-halflings-regular.woff2
+│  │  │  │  │      
+│  │  │  │  ├─Scripts
+│  │  │  │  │      bootstrap.js
+│  │  │  │  │      bootstrap.min.js
+│  │  │  │  │      jquery-3.3.1.js
+│  │  │  │  │      jquery-3.3.1.min.js
+│  │  │  │  │      jquery-3.3.1.min.map
+│  │  │  │  │      jquery-3.3.1.slim.js
+│  │  │  │  │      jquery-3.3.1.slim.min.js
+│  │  │  │  │      jquery-3.3.1.slim.min.map
+│  │  │  │  │      jquery-ui.js
+│  │  │  │  │      jquery.blockUI.js
+│  │  │  │  │      jquery.validate.js
+│  │  │  │  │      jquery.validate.min.js
+│  │  │  │  │      jquery.validate.unobtrusive.js
+│  │  │  │  │      jquery.validate.unobtrusive.min.js
+│  │  │  │  │      modernizr-2.8.3.js
+│  │  │  │  │      
+│  │  │  │  ├─Validation
+│  │  │  │  │      Namespace.json
+│  │  │  │  │      
+│  │  │  │  └─Views
+│  │  │  │      │  Web.config
+│  │  │  │      │  _ViewStart.cshtml
+│  │  │  │      │  
+│  │  │  │      ├─Home
+│  │  │  │      │      About.cshtml
+│  │  │  │      │      CbcGenerator.cshtml
+│  │  │  │      │      Contact.cshtml
+│  │  │  │      │      Index.cshtml
+│  │  │  │      │      
+│  │  │  │      └─Shared
+│  │  │  │              Error.cshtml
+│  │  │  │              _Layout.cshtml
+│  │  │  │              
+│  │  │  └─TempBuildDir
+│  │  │      │  ApplicationInsights.config
+│  │  │      │  favicon.ico
+│  │  │      │  PrecompiledApp.config
+│  │  │      │  Web.config
+│  │  │      │  
+│  │  │      ├─bin
+│  │  │      │  │  Antlr3.Runtime.dll
+│  │  │      │  │  Antlr3.Runtime.pdb
+│  │  │      │  │  ApplicationInsights.config
+│  │  │      │  │  App_global.asax.compiled
+│  │  │      │  │  App_global.asax.dll
+│  │  │      │  │  CbcXmlGenerator.dll
+│  │  │      │  │  CbcXmlGenerator.pdb
+│  │  │      │  │  Dapper.dll
+│  │  │      │  │  ICSharpCode.SharpZipLib.dll
+│  │  │      │  │  log4net.dll
+│  │  │      │  │  Microsoft.AI.Agent.Intercept.dll
+│  │  │      │  │  Microsoft.AI.DependencyCollector.dll
+│  │  │      │  │  Microsoft.AI.PerfCounterCollector.dll
+│  │  │      │  │  Microsoft.AI.ServerTelemetryChannel.dll
+│  │  │      │  │  Microsoft.AI.Web.dll
+│  │  │      │  │  Microsoft.AI.WindowsServer.dll
+│  │  │      │  │  Microsoft.ApplicationInsights.dll
+│  │  │      │  │  Microsoft.AspNet.TelemetryCorrelation.dll
+│  │  │      │  │  Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+│  │  │      │  │  Microsoft.Web.Infrastructure.dll
+│  │  │      │  │  Newtonsoft.Json.dll
+│  │  │      │  │  NPOI.dll
+│  │  │      │  │  NPOI.OOXML.dll
+│  │  │      │  │  NPOI.OpenXml4Net.dll
+│  │  │      │  │  NPOI.OpenXmlFormats.dll
+│  │  │      │  │  System.Diagnostics.DiagnosticSource.dll
+│  │  │      │  │  System.Web.Helpers.dll
+│  │  │      │  │  System.Web.Mvc.dll
+│  │  │      │  │  System.Web.Optimization.dll
+│  │  │      │  │  System.Web.Razor.dll
+│  │  │      │  │  System.Web.WebPages.Deployment.dll
+│  │  │      │  │  System.Web.WebPages.dll
+│  │  │      │  │  System.Web.WebPages.Razor.dll
+│  │  │      │  │  WebGrease.dll
+│  │  │      │  │  
+│  │  │      │  ├─roslyn
+│  │  │      │  │      csc.exe
+│  │  │      │  │      csc.exe.config
+│  │  │      │  │      csc.rsp
+│  │  │      │  │      csi.exe
+│  │  │      │  │      csi.exe.config
+│  │  │      │  │      csi.rsp
+│  │  │      │  │      Microsoft.Build.Tasks.CodeAnalysis.dll
+│  │  │      │  │      Microsoft.CodeAnalysis.CSharp.dll
+│  │  │      │  │      Microsoft.CodeAnalysis.CSharp.Scripting.dll
+│  │  │      │  │      Microsoft.CodeAnalysis.dll
+│  │  │      │  │      Microsoft.CodeAnalysis.Scripting.dll
+│  │  │      │  │      Microsoft.CodeAnalysis.VisualBasic.dll
+│  │  │      │  │      Microsoft.CSharp.Core.targets
+│  │  │      │  │      Microsoft.DiaSymReader.Native.amd64.dll
+│  │  │      │  │      Microsoft.DiaSymReader.Native.x86.dll
+│  │  │      │  │      Microsoft.Managed.Core.targets
+│  │  │      │  │      Microsoft.VisualBasic.Core.targets
+│  │  │      │  │      System.AppContext.dll
+│  │  │      │  │      System.Collections.Immutable.dll
+│  │  │      │  │      System.Console.dll
+│  │  │      │  │      System.Diagnostics.FileVersionInfo.dll
+│  │  │      │  │      System.Diagnostics.StackTrace.dll
+│  │  │      │  │      System.IO.Compression.dll
+│  │  │      │  │      System.IO.FileSystem.dll
+│  │  │      │  │      System.IO.FileSystem.Primitives.dll
+│  │  │      │  │      System.IO.Pipes.AccessControl.dll
+│  │  │      │  │      System.IO.Pipes.dll
+│  │  │      │  │      System.Reflection.Metadata.dll
+│  │  │      │  │      System.Security.AccessControl.dll
+│  │  │      │  │      System.Security.Claims.dll
+│  │  │      │  │      System.Security.Cryptography.Algorithms.dll
+│  │  │      │  │      System.Security.Cryptography.Encoding.dll
+│  │  │      │  │      System.Security.Cryptography.Primitives.dll
+│  │  │      │  │      System.Security.Cryptography.X509Certificates.dll
+│  │  │      │  │      System.Security.Principal.Windows.dll
+│  │  │      │  │      System.Text.Encoding.CodePages.dll
+│  │  │      │  │      System.ValueTuple.dll
+│  │  │      │  │      System.Xml.ReaderWriter.dll
+│  │  │      │  │      System.Xml.XmlDocument.dll
+│  │  │      │  │      System.Xml.XPath.dll
+│  │  │      │  │      System.Xml.XPath.XDocument.dll
+│  │  │      │  │      vbc.exe
+│  │  │      │  │      vbc.exe.config
+│  │  │      │  │      vbc.rsp
+│  │  │      │  │      VBCSCompiler.exe
+│  │  │      │  │      VBCSCompiler.exe.config
+│  │  │      │  │      
+│  │  │      │  ├─Validation
+│  │  │      │  │  ├─GB
+│  │  │      │  │  │      CbcXML_v1.0.1.xsd
+│  │  │      │  │  │      isocbctypes_v1.0.1.xsd
+│  │  │      │  │  │      oecdtypes_v4.1.xsd
+│  │  │      │  │  │      
+│  │  │      │  │  └─HK
+│  │  │      │  │          cbctypes_v1.0.xsd
+│  │  │      │  │          Cbc_HK_XML_v1.0.xsd
+│  │  │      │  │          isocbctypes_v1.0.1.xsd
+│  │  │      │  │          
+│  │  │      │  └─zh-Hant
+│  │  │      │          System.Web.Helpers.resources.dll
+│  │  │      │          System.Web.Mvc.resources.dll
+│  │  │      │          System.Web.Optimization.resources.dll
+│  │  │      │          System.Web.Razor.resources.dll
+│  │  │      │          System.Web.WebPages.Deployment.resources.dll
+│  │  │      │          System.Web.WebPages.Razor.resources.dll
+│  │  │      │          System.Web.WebPages.resources.dll
+│  │  │      │          
+│  │  │      ├─Content
+│  │  │      │  │  bootstrap-theme.css
+│  │  │      │  │  bootstrap-theme.css.map
+│  │  │      │  │  bootstrap-theme.min.css
+│  │  │      │  │  bootstrap-theme.min.css.map
+│  │  │      │  │  bootstrap.css
+│  │  │      │  │  bootstrap.css.map
+│  │  │      │  │  bootstrap.min.css
+│  │  │      │  │  bootstrap.min.css.map
+│  │  │      │  │  jquery-ui.css
+│  │  │      │  │  jquery-ui.structure.css
+│  │  │      │  │  jquery-ui.theme.css
+│  │  │      │  │  Site.css
+│  │  │      │  │  
+│  │  │      │  └─images
+│  │  │      │          ui-icons_444444_256x240.png
+│  │  │      │          ui-icons_555555_256x240.png
+│  │  │      │          ui-icons_777620_256x240.png
+│  │  │      │          ui-icons_777777_256x240.png
+│  │  │      │          ui-icons_cc0000_256x240.png
+│  │  │      │          ui-icons_ffffff_256x240.png
+│  │  │      │          
+│  │  │      ├─fonts
+│  │  │      │      glyphicons-halflings-regular.eot
+│  │  │      │      glyphicons-halflings-regular.svg
+│  │  │      │      glyphicons-halflings-regular.ttf
+│  │  │      │      glyphicons-halflings-regular.woff
+│  │  │      │      glyphicons-halflings-regular.woff2
+│  │  │      │      
+│  │  │      ├─Scripts
+│  │  │      │      bootstrap.js
+│  │  │      │      bootstrap.min.js
+│  │  │      │      jquery-3.3.1.js
+│  │  │      │      jquery-3.3.1.min.js
+│  │  │      │      jquery-3.3.1.min.map
+│  │  │      │      jquery-3.3.1.slim.js
+│  │  │      │      jquery-3.3.1.slim.min.js
+│  │  │      │      jquery-3.3.1.slim.min.map
+│  │  │      │      jquery-ui.js
+│  │  │      │      jquery.blockUI.js
+│  │  │      │      jquery.validate.js
+│  │  │      │      jquery.validate.min.js
+│  │  │      │      jquery.validate.unobtrusive.js
+│  │  │      │      jquery.validate.unobtrusive.min.js
+│  │  │      │      modernizr-2.8.3.js
+│  │  │      │      
+│  │  │      ├─Validation
+│  │  │      │      Namespace.json
+│  │  │      │      
+│  │  │      └─Views
+│  │  │          │  Web.config
+│  │  │          │  _ViewStart.cshtml
+│  │  │          │  
+│  │  │          ├─Home
+│  │  │          │      About.cshtml
+│  │  │          │      CbcGenerator.cshtml
+│  │  │          │      Contact.cshtml
+│  │  │          │      Index.cshtml
+│  │  │          │      
+│  │  │          └─Shared
+│  │  │                  Error.cshtml
+│  │  │                  _Layout.cshtml
+│  │  │                  
+│  │  ├─CSAutoParameterize
+│  │  │  ├─original
+│  │  │  │  │  Web.config
+│  │  │  │  │  
+│  │  │  │  └─Views
+│  │  │  │          Web.config
+│  │  │  │          
+│  │  │  └─transformed
+│  │  │      │  Web.config
+│  │  │      │  
+│  │  │      └─Views
+│  │  │              Web.config
+│  │  │              
+│  │  ├─Database
+│  │  ├─Package
+│  │  │  │  CbcXmlGenerator.SourceManifest.xml
+│  │  │  │  
+│  │  │  └─PackageTmp
+│  │  │      │  ApplicationInsights.config
+│  │  │      │  favicon.ico
+│  │  │      │  PrecompiledApp.config
+│  │  │      │  Web.config
+│  │  │      │  
+│  │  │      ├─bin
+│  │  │      │  │  Antlr3.Runtime.dll
+│  │  │      │  │  Antlr3.Runtime.pdb
+│  │  │      │  │  ApplicationInsights.config
+│  │  │      │  │  App_global.asax.compiled
+│  │  │      │  │  App_global.asax.dll
+│  │  │      │  │  CbcXmlGenerator.dll
+│  │  │      │  │  CbcXmlGenerator.pdb
+│  │  │      │  │  Dapper.dll
+│  │  │      │  │  ICSharpCode.SharpZipLib.dll
+│  │  │      │  │  log4net.dll
+│  │  │      │  │  Microsoft.AI.Agent.Intercept.dll
+│  │  │      │  │  Microsoft.AI.DependencyCollector.dll
+│  │  │      │  │  Microsoft.AI.PerfCounterCollector.dll
+│  │  │      │  │  Microsoft.AI.ServerTelemetryChannel.dll
+│  │  │      │  │  Microsoft.AI.Web.dll
+│  │  │      │  │  Microsoft.AI.WindowsServer.dll
+│  │  │      │  │  Microsoft.ApplicationInsights.dll
+│  │  │      │  │  Microsoft.AspNet.TelemetryCorrelation.dll
+│  │  │      │  │  Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+│  │  │      │  │  Microsoft.Web.Infrastructure.dll
+│  │  │      │  │  Newtonsoft.Json.dll
+│  │  │      │  │  NPOI.dll
+│  │  │      │  │  NPOI.OOXML.dll
+│  │  │      │  │  NPOI.OpenXml4Net.dll
+│  │  │      │  │  NPOI.OpenXmlFormats.dll
+│  │  │      │  │  System.Diagnostics.DiagnosticSource.dll
+│  │  │      │  │  System.Web.Helpers.dll
+│  │  │      │  │  System.Web.Mvc.dll
+│  │  │      │  │  System.Web.Optimization.dll
+│  │  │      │  │  System.Web.Razor.dll
+│  │  │      │  │  System.Web.WebPages.Deployment.dll
+│  │  │      │  │  System.Web.WebPages.dll
+│  │  │      │  │  System.Web.WebPages.Razor.dll
+│  │  │      │  │  WebGrease.dll
+│  │  │      │  │  
+│  │  │      │  ├─roslyn
+│  │  │      │  │      csc.exe
+│  │  │      │  │      csc.exe.config
+│  │  │      │  │      csc.rsp
+│  │  │      │  │      csi.exe
+│  │  │      │  │      csi.exe.config
+│  │  │      │  │      csi.rsp
+│  │  │      │  │      Microsoft.Build.Tasks.CodeAnalysis.dll
+│  │  │      │  │      Microsoft.CodeAnalysis.CSharp.dll
+│  │  │      │  │      Microsoft.CodeAnalysis.CSharp.Scripting.dll
+│  │  │      │  │      Microsoft.CodeAnalysis.dll
+│  │  │      │  │      Microsoft.CodeAnalysis.Scripting.dll
+│  │  │      │  │      Microsoft.CodeAnalysis.VisualBasic.dll
+│  │  │      │  │      Microsoft.CSharp.Core.targets
+│  │  │      │  │      Microsoft.DiaSymReader.Native.amd64.dll
+│  │  │      │  │      Microsoft.DiaSymReader.Native.x86.dll
+│  │  │      │  │      Microsoft.Managed.Core.targets
+│  │  │      │  │      Microsoft.VisualBasic.Core.targets
+│  │  │      │  │      System.AppContext.dll
+│  │  │      │  │      System.Collections.Immutable.dll
+│  │  │      │  │      System.Console.dll
+│  │  │      │  │      System.Diagnostics.FileVersionInfo.dll
+│  │  │      │  │      System.Diagnostics.StackTrace.dll
+│  │  │      │  │      System.IO.Compression.dll
+│  │  │      │  │      System.IO.FileSystem.dll
+│  │  │      │  │      System.IO.FileSystem.Primitives.dll
+│  │  │      │  │      System.IO.Pipes.AccessControl.dll
+│  │  │      │  │      System.IO.Pipes.dll
+│  │  │      │  │      System.Reflection.Metadata.dll
+│  │  │      │  │      System.Security.AccessControl.dll
+│  │  │      │  │      System.Security.Claims.dll
+│  │  │      │  │      System.Security.Cryptography.Algorithms.dll
+│  │  │      │  │      System.Security.Cryptography.Encoding.dll
+│  │  │      │  │      System.Security.Cryptography.Primitives.dll
+│  │  │      │  │      System.Security.Cryptography.X509Certificates.dll
+│  │  │      │  │      System.Security.Principal.Windows.dll
+│  │  │      │  │      System.Text.Encoding.CodePages.dll
+│  │  │      │  │      System.ValueTuple.dll
+│  │  │      │  │      System.Xml.ReaderWriter.dll
+│  │  │      │  │      System.Xml.XmlDocument.dll
+│  │  │      │  │      System.Xml.XPath.dll
+│  │  │      │  │      System.Xml.XPath.XDocument.dll
+│  │  │      │  │      vbc.exe
+│  │  │      │  │      vbc.exe.config
+│  │  │      │  │      vbc.rsp
+│  │  │      │  │      VBCSCompiler.exe
+│  │  │      │  │      VBCSCompiler.exe.config
+│  │  │      │  │      
+│  │  │      │  ├─Validation
+│  │  │      │  │  ├─GB
+│  │  │      │  │  │      CbcXML_v1.0.1.xsd
+│  │  │      │  │  │      isocbctypes_v1.0.1.xsd
+│  │  │      │  │  │      oecdtypes_v4.1.xsd
+│  │  │      │  │  │      
+│  │  │      │  │  └─HK
+│  │  │      │  │          cbctypes_v1.0.xsd
+│  │  │      │  │          Cbc_HK_XML_v1.0.xsd
+│  │  │      │  │          isocbctypes_v1.0.1.xsd
+│  │  │      │  │          
+│  │  │      │  └─zh-Hant
+│  │  │      │          System.Web.Helpers.resources.dll
+│  │  │      │          System.Web.Mvc.resources.dll
+│  │  │      │          System.Web.Optimization.resources.dll
+│  │  │      │          System.Web.Razor.resources.dll
+│  │  │      │          System.Web.WebPages.Deployment.resources.dll
+│  │  │      │          System.Web.WebPages.Razor.resources.dll
+│  │  │      │          System.Web.WebPages.resources.dll
+│  │  │      │          
+│  │  │      ├─Content
+│  │  │      │  │  bootstrap-theme.css
+│  │  │      │  │  bootstrap-theme.css.map
+│  │  │      │  │  bootstrap-theme.min.css
+│  │  │      │  │  bootstrap-theme.min.css.map
+│  │  │      │  │  bootstrap.css
+│  │  │      │  │  bootstrap.css.map
+│  │  │      │  │  bootstrap.min.css
+│  │  │      │  │  bootstrap.min.css.map
+│  │  │      │  │  jquery-ui.css
+│  │  │      │  │  jquery-ui.structure.css
+│  │  │      │  │  jquery-ui.theme.css
+│  │  │      │  │  Site.css
+│  │  │      │  │  
+│  │  │      │  └─images
+│  │  │      │          ui-icons_444444_256x240.png
+│  │  │      │          ui-icons_555555_256x240.png
+│  │  │      │          ui-icons_777620_256x240.png
+│  │  │      │          ui-icons_777777_256x240.png
+│  │  │      │          ui-icons_cc0000_256x240.png
+│  │  │      │          ui-icons_ffffff_256x240.png
+│  │  │      │          
+│  │  │      ├─fonts
+│  │  │      │      glyphicons-halflings-regular.eot
+│  │  │      │      glyphicons-halflings-regular.svg
+│  │  │      │      glyphicons-halflings-regular.ttf
+│  │  │      │      glyphicons-halflings-regular.woff
+│  │  │      │      glyphicons-halflings-regular.woff2
+│  │  │      │      
+│  │  │      ├─Scripts
+│  │  │      │      bootstrap.js
+│  │  │      │      bootstrap.min.js
+│  │  │      │      jquery-3.3.1.js
+│  │  │      │      jquery-3.3.1.min.js
+│  │  │      │      jquery-3.3.1.min.map
+│  │  │      │      jquery-3.3.1.slim.js
+│  │  │      │      jquery-3.3.1.slim.min.js
+│  │  │      │      jquery-3.3.1.slim.min.map
+│  │  │      │      jquery-ui.js
+│  │  │      │      jquery.blockUI.js
+│  │  │      │      jquery.validate.js
+│  │  │      │      jquery.validate.min.js
+│  │  │      │      jquery.validate.unobtrusive.js
+│  │  │      │      jquery.validate.unobtrusive.min.js
+│  │  │      │      modernizr-2.8.3.js
+│  │  │      │      
+│  │  │      ├─Validation
+│  │  │      │      Namespace.json
+│  │  │      │      
+│  │  │      └─Views
+│  │  │          │  Web.config
+│  │  │          │  _ViewStart.cshtml
+│  │  │          │  
+│  │  │          ├─Home
+│  │  │          │      About.cshtml
+│  │  │          │      CbcGenerator.cshtml
+│  │  │          │      Contact.cshtml
+│  │  │          │      Index.cshtml
+│  │  │          │      
+│  │  │          └─Shared
+│  │  │                  Error.cshtml
+│  │  │                  _Layout.cshtml
+│  │  │                  
+│  │  ├─ProfileTransformWebConfig
+│  │  │  └─transformed
+│  │  │      └─Views
+│  │  ├─TempPE
+│  │  ├─TransformWebConfig
+│  │  │  ├─assist
+│  │  │  │      Web.config
+│  │  │  │      
+│  │  │  ├─original
+│  │  │  │      Web.config
+│  │  │  │      
+│  │  │  └─transformed
+│  │  │      │  Web.config
+│  │  │      │  
+│  │  │      └─Views
+│  │  └─__testMsDeployConnection__
+│  └─Release
+│          CbcXmlGenerator.csproj.CoreCompileInputs.cache
+│          
+├─Properties
+│  │  AssemblyInfo.cs
+│  │  
+│  └─PublishProfiles
+│          CustomProfile.pubxml
+│          CustomProfile.pubxml.user
+│          
+├─Scripts
+│      bootstrap.js
+│      bootstrap.min.js
+│      jquery-3.3.1.intellisense.js
+│      jquery-3.3.1.js
+│      jquery-3.3.1.min.js
+│      jquery-3.3.1.min.map
+│      jquery-3.3.1.slim.js
+│      jquery-3.3.1.slim.min.js
+│      jquery-3.3.1.slim.min.map
+│      jquery-ui.js
+│      jquery.blockUI.js
+│      jquery.validate-vsdoc.js
+│      jquery.validate.js
+│      jquery.validate.min.js
+│      jquery.validate.unobtrusive.js
+│      jquery.validate.unobtrusive.min.js
+│      modernizr-2.8.3.js
+│      
+├─Validation
+│  │  Namespace.json
+│  │  
+│  ├─GB
+│  │      CbcXML_v1.0.1.xsd
+│  │      isocbctypes_v1.0.1.xsd
+│  │      oecdtypes_v4.1.xsd
+│  │      
+│  └─HK
+│          cbctypes_v1.0.xsd
+│          Cbc_HK_XML_v1.0.xsd
+│          isocbctypes_v1.0.1.xsd
+│          
+└─Views
+    │  Web.config
+    │  _ViewStart.cshtml
+    │  
+    ├─Home
+    │      About.cshtml
+    │      CbcGenerator.cshtml
+    │      Contact.cshtml
+    │      Index.cshtml
+    │      
+    └─Shared
+            Error.cshtml
+            _Layout.cshtml
+            
