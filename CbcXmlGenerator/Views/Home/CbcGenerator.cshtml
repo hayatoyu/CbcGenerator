@@ -21,7 +21,7 @@
                 $.ajax(
                     {
                         type: "POST",
-                        url: "CbcGenerator",
+                        url: this.action,
                         contentType: false,
                         processData: false,
                         dataType: "text",
@@ -30,7 +30,7 @@
 
                             try {
                                 var ret = $.parseJSON(msg);
-                                var url = 'Download?id=' + ret.Id;
+                                var url = '/Home/Download?id=' + ret.Id;
                                 window.open(url, '_blank');
                             } catch (e) {
                                 alert(e);
