@@ -209,6 +209,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="imgs\image.zip" />
+    <Content Include="Doc\CBCXML系統文件及操作說明.doc" />
+    <Content Include="Doc\country-by-country-reporting-xml-schema-user-guide-for-tax-administrations.pdf" />
+    <Content Include="Doc\HMRC CbC XML User Guide V1-0-1-03 Customer Version%28附件二%29.pdf" />
+    <Content Include="Doc\資料庫規格.doc" />
+    <Content Include="Doc\模版範例.xls" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
